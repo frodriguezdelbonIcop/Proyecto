@@ -3,14 +3,14 @@ import java.util.HashMap;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Map.Entry;
-public class Alumno extends Persona {
+public class Estudiante extends Persona {
 private ArrayList<Matricula>cursos;
 
-public Alumno() {
+public Estudiante() {
 	super();
 	this.cursos=new ArrayList();
 }
-public Alumno(String nombre, String apellido, estadoCivil estCivil,int dni) {
+public Estudiante(String nombre, String apellido, estadoCivil estCivil,int dni) {
 	super(nombre, apellido, estCivil, dni);
 	this.cursos=new ArrayList();
 }

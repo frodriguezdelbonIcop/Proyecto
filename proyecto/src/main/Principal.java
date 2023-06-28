@@ -58,19 +58,19 @@ private static String eleccion="";
 		Matricula matricula2 = new Matricula(curso,2023);
 		instituto.agregarMatricula(matricula2);
 		instituto.agregarMatricula(matricula);
-		Alumno alumno1 = new Alumno("Facundo", "Rodriguez", estadoCivil.SOLTERO , 12478312);
+		Estudiante alumno1 = new Estudiante("Facundo", "Rodriguez", estadoCivil.SOLTERO , 12478312);
 		instituto.agregarPersona(alumno1);
 		instituto.matricularAlumnoCurso(alumno1, matricula);
-		Alumno alumno2 = new Alumno("Tomas", "Fernandez", estadoCivil.SOLTERO, 423456349);
+		Estudiante alumno2 = new Estudiante("Tomas", "Fernandez", estadoCivil.SOLTERO, 423456349);
 		instituto.agregarPersona(alumno2);
 		instituto.matricularAlumnoCurso(alumno2, matricula2);
 		Profesor profesor1 = new Profesor("Pedro Keke", "Pascal", estadoCivil.CASADO,64523, 1980, depto);
 		instituto.agregarPersona(profesor1);
 		Profesor profesor2 = new Profesor("Pepe", "Kukichi", estadoCivil.SOLTERO,52351, 203, depto2);
 		instituto.agregarPersona(profesor2);
-		DeServicio deservicio1 = new DeServicio("Abril", "Rodriguez", estadoCivil.VIUDO, 43256, 1990, seccion2);
+		EmpleadoServicio deservicio1 = new EmpleadoServicio("Abril", "Rodriguez", estadoCivil.VIUDO, 43256, 1990, seccion2);
 		instituto.agregarPersona(deservicio1);
-		DeServicio deservicio2 = new DeServicio("Lionel", "Messi", estadoCivil.DIVORCIADO, 52365, 2010, seccion);
+		EmpleadoServicio deservicio2 = new EmpleadoServicio("Lionel", "Messi", estadoCivil.DIVORCIADO, 52365, 2010, seccion);
 		instituto.agregarPersona(deservicio2);
 		while (!eleccion.equals("q"))
 		 {

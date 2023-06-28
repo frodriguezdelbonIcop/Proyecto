@@ -1,18 +1,18 @@
 package entidades;
-import java.util.Scanner;
-public class DeServicio extends Empleado {
+import java.util.*;
+public class EmpleadoServicio extends Empleado {
 private Seccion Seccion;
 
-public DeServicio(String nom, String ape, estadoCivil EstadoCiv, int dni, int anioIncorp,
+public EmpleadoServicio(String nom, String ape, estadoCivil EstadoCiv, int dni, int anioIncorp,
 		entidades.Seccion seccion) {
 	super(nom, ape, EstadoCiv, dni, anioIncorp);
 	Seccion = seccion;
 }
-public DeServicio() {
+public EmpleadoServicio() {
 	super();
 	
 }
-public DeServicio(Seccion seccion) {
+public EmpleadoServicio(Seccion seccion) {
 	super();
 	Seccion = seccion;
 }

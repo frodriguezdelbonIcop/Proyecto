@@ -77,7 +77,7 @@ public void agregarPersona() {
 	int op = sc.nextInt();
 	switch(op) {
 	case 1: 
-		Alumno alumno = new Alumno();
+		Estudiante alumno = new Estudiante();
 		this.personas.add(alumno);
 		break;
 	case 2:
@@ -103,7 +103,7 @@ public void agregarPersona() {
 		int num = sc.nextInt();
 		for(int i = 0; i<deptos.size();i++) { 
 			if (num == i) {
-			DeServicio servicio = new DeServicio(secciones.get(i));
+			EmpleadoServicio servicio = new EmpleadoServicio(secciones.get(i));
 			personas.add(servicio);
 			}
 		}
@@ -119,7 +119,7 @@ public void mostrarPersonas() {
 	switch(e) {
 	case 1:
 		for (int i=0;i<personas.size();i++) {
-			if(personas.get(i) instanceof Alumno) {
+			if(personas.get(i) instanceof Estudiante) {
 				personas.get(i).mostrar();
 			}
 		}
@@ -133,7 +133,7 @@ public void mostrarPersonas() {
 		break;
 	case 3:
 		for (int i=0;i<personas.size();i++) {
-			if(personas.get(i) instanceof DeServicio) {
+			if(personas.get(i) instanceof EmpleadoServicio) {
 				personas.get(i).mostrar();
 			}
 		}
@@ -155,7 +155,7 @@ public int buscarPersona() {
 	switch(opc) {
 	case 1:
 		for(int i=0;i<personas.size();i++) {
-			if(this.personas.get(i) instanceof Alumno) {
+			if(this.personas.get(i) instanceof Estudiante) {
 				if(dni==personas.get(i).getDni()) {
 					return i;
 				}
@@ -182,7 +182,7 @@ public int buscarPersona() {
 		break;
 	case 4:
 		for(int i=0;i<personas.size();i++) {
-			if(this.personas.get(i) instanceof DeServicio) {
+			if(this.personas.get(i) instanceof EmpleadoServicio) {
 				if(dni==personas.get(i).getDni()) {
 					return i;
 				}
@@ -221,9 +221,9 @@ public void reasigancionLegajo() {
 			profesor.setDni(0);
 			profesor.cambiarLegajo();
 			personas.add(prof);
-		}else if(empleado instanceof DeServicio) {
-			DeServicio deservicio = (DeServicio)empleado;
-			DeServicio servi = new DeServicio(deservicio.getNombre(), deservicio.getApellido(), deservicio.getEstado(), deservicio.getDni(), deservicio.getAnioIncorp(), deservicio.getSeccion());
+		}else if(empleado instanceof EmpleadoServicio) {
+			EmpleadoServicio deservicio = (EmpleadoServicio)empleado;
+			EmpleadoServicio servi = new EmpleadoServicio(deservicio.getNombre(), deservicio.getApellido(), deservicio.getEstado(), deservicio.getDni(), deservicio.getAnioIncorp(), deservicio.getSeccion());
 			servi.setNumId(deservicio.getNumId());
 			deservicio.setDni(0);
 			deservicio.cambiarLegajo();
@@ -253,7 +253,7 @@ public void cambiarDepto() {
 //De Servicio
 public void cambiarSeccion() {
 	int indiceDS=buscarPersona();
-	if (personas.get(indiceDS)instanceof DeServicio) {
+	if (personas.get(indiceDS)instanceof EmpleadoServicio) {
 		System.out.println("Seleccione seccion nueva:");
 		System.out.println("Las secciones disponinles son: ");
 		for(int i = 0; i<secciones.size();i++) {
@@ -261,7 +261,7 @@ public void cambiarSeccion() {
 		}
 		int o=sc.nextInt();
 		if (o<secciones.size()) {
-			DeServicio deser =(DeServicio) personas.get(indiceDS);
+			EmpleadoServicio deser =(EmpleadoServicio) personas.get(indiceDS);
 			deser.setSeccion(secciones.get(o));
 		}
 	}else {
@@ -306,12 +306,12 @@ public void matricularAlumnoCurso() {
 	int indiceGC=sc.nextInt();
 	int indiceAL=buscarPersona();
 	if(indiceAL!=-1) {
-		gruposDeCursado.get(indiceGC).agregarAlumno((Alumno)personas.get(indiceAL));
-		Alumno alumno = (Alumno)personas.get(indiceAL);
+		gruposDeCursado.get(indiceGC).agregarAlumno((Estudiante)personas.get(indiceAL));
+		Estudiante alumno = (Estudiante)personas.get(indiceAL);
 		alumno.matricularCurso(gruposDeCursado.get(indiceGC));
 		}
 }
-public void matricularAlumnoCurso(Alumno alumno, Matricula grupoCurso) {
+public void matricularAlumnoCurso(Estudiante alumno, Matricula grupoCurso) {
 	alumno.matricularCurso(grupoCurso);
 	grupoCurso.agregarAlumno(alumno);
 }

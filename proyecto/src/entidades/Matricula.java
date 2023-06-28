@@ -1,9 +1,8 @@
 package entidades;
 import java.util.*;
-import java.util.Scanner;
 public class Matricula {
 private Curso curso;
-private ArrayList<Alumno>alumnos;
+private ArrayList<Estudiante>alumnos;
 private int año;
 
 
@@ -13,7 +12,7 @@ public Matricula(Curso curso, int año) {
 	this.año = año;
 	alumnos= new ArrayList();
 }
-public void agregarAlumno(Alumno alumno) {
+public void agregarAlumno(Estudiante alumno) {
 	alumnos.add(alumno);
 }
 public void mostrarInscriptos() {
