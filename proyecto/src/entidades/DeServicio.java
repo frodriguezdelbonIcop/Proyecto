@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class DeServicio extends Empleado {
 private Seccion Seccion;
 
-public DeServicio(String nom, String ape, estadoCivil EstadoCiv, int dni, int añoIncorp,
+public DeServicio(String nom, String ape, estadoCivil EstadoCiv, int dni, int anioIncorp,
 		entidades.Seccion seccion) {
-	super(nom, ape, EstadoCiv, dni, añoIncorp);
+	super(nom, ape, EstadoCiv, dni, anioIncorp);
 	Seccion = seccion;
 }
 public DeServicio() {

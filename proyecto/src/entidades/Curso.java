@@ -7,9 +7,6 @@ private int idCurso;
 
 public Curso() {
 	Scanner sc = new Scanner(System.in);
-	System.out.println("-------------------------- ");
-	System.out.println("| Registrar nuevo curso: |");
-	System.out.println("-------------------------- ");
 	System.out.println("Ingrese nombre de curso: ");
 	this.nombre=sc.nextLine();
 	this.idCurso=nro++;
