@@ -71,8 +71,8 @@ public void setDireccion(String direccion) {
 // -- Personas --
 public void agregarPersona() {
 	System.out.println("Ingrese opcion:" );
-	System.out.println("1 - Agregar Alumno"
-			+"2 - Agregar Profesor"
+	System.out.println("1 - Agregar Alumno "
+			+"2 - Agregar Profesor "
 			+"3 - Agregar Empleado De Servicio");
 	int op = sc.nextInt();
 	switch(op) {

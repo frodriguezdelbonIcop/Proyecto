@@ -20,7 +20,7 @@ public Persona() {
 	this.dni=sc.nextInt();
 	this.numId=num;
 	num++;
-	System.out.println("Ingrese estado civil: {1)Soltero, 2)Casado, 3)Viudo, 4)Divorciado");
+	System.out.println("Ingrese estado civil: 1)Soltero, 2)Casado, 3)Viudo, 4)Divorciado");
 	int EstCivil=sc.nextInt();
 	switch(EstCivil) {
 	case 1:
