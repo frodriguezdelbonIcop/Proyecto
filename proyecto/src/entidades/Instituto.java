@@ -71,9 +71,9 @@ public void setDireccion(String direccion) {
 // -- Personas --
 public void agregarPersona() {
 	System.out.println("Ingrese opcion:" );
-	System.out.println("1)Agregar Alumno"
-			+"\n2)Agregar Profesor"
-			+"\n3)Agregar Empleado De Servicio");
+	System.out.println("1 - Agregar Alumno"
+			+"2 - Agregar Profesor"
+			+"3 - Agregar Empleado De Servicio");
 	int op = sc.nextInt();
 	switch(op) {
 	case 1: 
@@ -85,7 +85,7 @@ public void agregarPersona() {
 		for(int i = 0; i<deptos.size();i++) {
 			System.out.print(i+")"+(deptos.get(i)).getNombre()+", ");
 		}
-		System.out.println("\nIngrese el nro del departamento que desea vincular: ");
+		System.out.println("Ingrese el nro del departamento que desea vincular: ");
 		int nro = sc.nextInt();
 		for(int i = 0; i<deptos.size();i++) { 
 			if (nro == i) {
@@ -99,7 +99,7 @@ public void agregarPersona() {
 		for(int i = 0; i<secciones.size();i++) {
 			System.out.print(i+")"+(secciones.get(i)).getNombre()+", ");
 		}
-		System.out.println("\nIngrese el nro de la seccion que desea vincular: ");
+		System.out.println("Ingrese el nro de la seccion que desea vincular: ");
 		int num = sc.nextInt();
 		for(int i = 0; i<deptos.size();i++) { 
 			if (num == i) {
