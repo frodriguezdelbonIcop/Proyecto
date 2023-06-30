@@ -77,8 +77,8 @@ public void agregarPersona() {
 	int op = sc.nextInt();
 	switch(op) {
 	case 1: 
-		Estudiante alumno = new Estudiante();
-		this.personas.add(alumno);
+		Estudiante estudiante = new Estudiante();
+		this.personas.add(estudiante);
 		break;
 	case 2:
 		System.out.println("Los departamentos son: ");
